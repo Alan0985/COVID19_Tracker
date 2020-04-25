@@ -14,7 +14,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
         <Grid
           item
           xs={12}
-          md={3}
+          sm={3}
           component={Card}
           className={classes(styles.card, styles.infected)}
         >
@@ -42,7 +42,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
         <Grid
           item
           xs={12}
-          md={3}
+          sm={3}
           component={Card}
           className={classes(styles.card, styles.recovered)}
         >
@@ -70,7 +70,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
         <Grid
           item
           xs={12}
-          md={3}
+          sm={3}
           component={Card}
           className={classes(styles.card, styles.deaths)}
         >
