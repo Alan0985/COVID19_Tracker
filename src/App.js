@@ -1,11 +1,11 @@
 import React from "react";
 import { Cards, Chart, ContryPicker } from "./components";
-import "./App.css";
+import styles from "./App.module.css";
 
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
+      <div className={styles.container}>
         <Cards />
         <ContryPicker />
         <Chart />
