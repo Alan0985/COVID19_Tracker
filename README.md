@@ -1,3 +1,5 @@
+This is a web app of tracking COVID-19 developed with React JS, Chart JS, Material UI, React Countup and Axios.
+
 ### `npm install`
 
 Install the dependencies
