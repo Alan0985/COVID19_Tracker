@@ -1,5 +1,5 @@
 import React from "react";
-import { Cards, Chart, ContryPicker } from "./components";
+import { Cards, Chart, CountryPicker } from "./components";
 import styles from "./App.module.css";
 import { fetchData } from "./api";
 
@@ -9,8 +9,11 @@ class App extends React.Component {
     country: "",
   };
 
-  changeCountry = async (e) => {
-    this.setState({ country: e.target.value });
+  changeCountry = async (country) => {
+    const fetchedData = await fetchData(country);
+
+    this.setState({ data: fetchedData });
+    console.log(fetchedData);
   };
 
   async componentDidMount() {
@@ -21,12 +24,12 @@ class App extends React.Component {
   }
 
   render() {
-    const { data } = this.state;
+    const { data, country } = this.state;
     return (
       <div className={styles.container}>
         <Cards data={data} />
-        <ContryPicker onChangeCountry={this.changeCountry} />
-        <Chart />
+        <CountryPicker onChangeCountry={this.changeCountry} />
+        <Chart data={data} country={country} />
       </div>
     );
   }

@@ -4,6 +4,6 @@
 
 import Cards from "./Cards/Cards";
 import Chart from "./Chart/Chart";
-import ContryPicker from "./ContryPicker/ContryPicker";
+import CountryPicker from "./CountryPicker/CountryPicker";
 
-export { Cards, Chart, ContryPicker };
+export { Cards, Chart, CountryPicker };
